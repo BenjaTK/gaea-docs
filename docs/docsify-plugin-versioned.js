@@ -73,6 +73,7 @@ function versionedDocsPlugin(hook, vm) {
       versionSelector = initVersionSelector();
   });
 
+  /*
   hook.beforeEach(function (html, next) {
       // Replace {{versionLabel}} with the current version label in all markdown files
       var versionPath = getVersionPath(vm.compiler.contentBase, versions, defaultVersion);
@@ -100,6 +101,7 @@ function versionedDocsPlugin(hook, vm) {
         }
       }
     });
+  */
 }
 
 window.$docsify.plugins = [].concat(versionedDocsPlugin, window.$docsify.plugins);
