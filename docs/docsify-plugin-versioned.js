@@ -51,6 +51,8 @@ function versionedDocsPlugin(hook, vm) {
       label.className = 'version-selector-label';
       label.textContent = labelText;
       selector.insertBefore(label, selector.querySelector('select'));
+
+      console.log(versions);
       
       var nameEl = document.querySelector('.app-name');
       if (nameEl) {
