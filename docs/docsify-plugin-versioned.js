@@ -73,35 +73,6 @@ function versionedDocsPlugin(hook, vm) {
       versionSelector = initVersionSelector();
   });
 
-  /*
-  hook.beforeEach(function (html, next) {
-      // Replace {{versionLabel}} with the current version label in all markdown files
-      var versionPath = getVersionPath(vm.compiler.contentBase, versions, defaultVersion);
-      var version = versions.find((v) => v.folder === versionPath);
-      
-      if (version) {
-        var versionLabel = version.label;
-        var updatedHtml = html.replace(/{{versionLabel}}/g, versionLabel);
-        next(updatedHtml);
-      } else {
-        next(html);
-      }
-    });
-
-    hook.doneEach(function () {
-      // Replace {{versionLabel}} with the current version label in coverpage
-      var versionPath = getVersionPath(vm.compiler.contentBase, versions, defaultVersion);
-      var version = versions.find((v) => v.folder === versionPath);
-      
-      if (version) {
-        var versionLabel = version.label;
-        var cover = document.querySelector('.cover');
-        if (cover) {
-          cover.innerHTML = cover.innerHTML.replace(/{{versionLabel}}/g, versionLabel);
-        }
-      }
-    });
-  */
 }
 
 window.$docsify.plugins = [].concat(versionedDocsPlugin, window.$docsify.plugins);
