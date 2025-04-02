@@ -56,7 +56,7 @@ function versionedDocsPlugin(hook, vm) {
       
       var nameEl = document.querySelector('.app-name');
       if (nameEl) {
-          var versionLabel = versions.find((v) => v.folder === versionPath).label;
+          var versionLabel = Array.isArray(versions) ? versions.find((v) => v.folder === versionPath).label : "2.0";
           nameEl.innerHTML += ` <small>${versionLabel}</small>`;
           nameEl.parentNode.insertBefore(selector, nameEl.nextElementSibling);
       }
