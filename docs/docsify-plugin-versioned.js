@@ -17,8 +17,8 @@ function versionedDocsPlugin(hook, vm) {
       if (newPath === '' || newPath === 'README.md') {
         newPath = '/';
       }
-      window.location.href = '/' + version + '/';
-      vm.basePath = '/' + version + '/';
+      window.location.href = '/gaea-docs/' + version + '/';
+      vm.basePath = '/gaea-docs/' + version + '/';
   }
 
   function initVersionSelector() {
