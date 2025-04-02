@@ -18,7 +18,7 @@ function versionedDocsPlugin(hook, vm) {
         newPath = '/';
       }
       window.location.href = '/gaea-docs/' + version + '/';
-      vm.basePath = '/gaea-docs/' + version + '/';
+      vm.basePath = '/' + version + '/';
   }
 
   function initVersionSelector() {
